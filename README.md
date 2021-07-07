@@ -375,3 +375,11 @@ DR site construction is a long-term process and there will be more topics to add
 * Scope of the DR site, should we need entire DR at second region
 
 Building DR site with AWS managed services is not only focus on the network traffic, routing, storages, the goal for business operation SLA is the only standard to follow, so that you can go on the detail design to fulfill the requirements.
+
+If your domain is hosted in other domain service provider, suggest to migrate to AWS Route 53 to have the failover mechanism to reach the DR goal. Take reference from 
+
+- Making Amazon Route 53 the DNS service for an existing domain - https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html
+
+  > While doing DNS migration, your domain should remain available during the entire migration process. However, in the unlikely event that there are issues, the first option lets you roll back the migration quickly. With the second option, your domain could be unavailable for a couple of days.
+
+- Mirgating DNS domain in use -  https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html.
